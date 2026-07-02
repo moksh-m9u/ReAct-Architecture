@@ -26,7 +26,10 @@ cp .env.example .env
 python main.py
 ```
 
-You'll be prompted for a system prompt (the agent's persona) and a goal (what you want it to do). The agent will reason, call tools, and return a final answer.
+The script comes with a rigorous default system prompt built-in to enforce disciplined research and tool use. You'll be prompted for a goal (what you want it to do). The agent will reason, call tools, and return a final answer.
+
+**Example Goal:**
+> Research about topics which are discussed in the most in recent top published papers around agentic ai and make sure to compare at 3 of them
 
 ## How to add a new tool
 
@@ -77,11 +80,16 @@ Set the corresponding API key in `.env` (e.g. `OPENAI_API_KEY=sk-...`).
 ```bash
 python main.py
 ```
-You'll be asked for the system prompt and goal.
+If you don't provide a system prompt, it will fall back to a strict, built-in research persona. You'll then be asked for a goal:
+`Goal (what should the agent do?): Research about topics which are discussed in the most in recent top published papers around agentic ai and make sure to compare at 3 of them`
 
 ### Non-interactive (CLI args)
 ```bash
-python main.py --system "You are a helpful assistant." --goal "What is 2 + 2?"
+# Using the default rigorous research prompt:
+python main.py --goal "Research about topics which are discussed in the most in recent top published papers around agentic ai and make sure to compare at 3 of them"
+
+# Or override with your own custom system prompt:
+python main.py --system "You are a helpful math tutor." --goal "What is 2 + 2?"
 ```
 
 ## Configuration
