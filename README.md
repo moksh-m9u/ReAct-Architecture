@@ -12,6 +12,13 @@
 
 A plug-and-play Python harness for a [ReAct](https://arxiv.org/abs/2210.03629)-style agent. Drop a decorated function into `tools/`, set your model, and run.
 
+---
+## ReAct Architecture Research Paper : 
+<img width="1348" height="1750" alt="image" src="https://github.com/user-attachments/assets/de5818eb-e7c8-49bb-98d9-d72931f3b285" />
+
+---
+
+
 ## Quick start
 
 ```bash
